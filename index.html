@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>یک گوشه برای تو ⭐</title>
+<style>
+:root{--bg:#dbeaf2;--dark:#496d83;--brown:#6f5141;--gold:#d6b46a;--white:#fffdf9}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--brown);font-family:Tahoma,Arial,sans-serif;overflow:hidden}
+.stars{position:fixed;inset:0;pointer-events:none}
+.star{position:absolute;color:var(--gold);opacity:.7;animation:t 3.5s ease-in-out infinite}
+.s1{top:12%;left:12%;font-size:18px}.s2{top:23%;right:14%;font-size:12px;animation-delay:1s}
+.s3{top:67%;left:8%;font-size:11px;animation-delay:1.8s}.s4{bottom:13%;right:10%;font-size:17px;animation-delay:.6s}
+@keyframes t{50%{transform:scale(1.35);opacity:.35}}
+main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 20px}
+.card{width:min(760px,100%);min-height:78vh;background:rgba(255,253,249,.94);border:1px solid #ffffff99;border-radius:34px;box-shadow:0 24px 70px #496d8330;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 28px}
+.content{max-width:560px}.tiny{color:var(--dark);font-size:14px;margin-bottom:22px}
+h1{margin:0 0 20px;color:var(--brown);font-size:clamp(42px,9vw,76px);line-height:1.25}
+.lead{font-size:clamp(17px,3.5vw,22px);line-height:2.05;margin:0 auto 34px;color:#765a4a}
+.button{border:0;border-radius:999px;padding:13px 27px;background:var(--dark);color:white;font:500 16px Tahoma;cursor:pointer;transition:.25s}
+.button:hover{transform:translateY(-2px)}
+.hidden{display:none}
+.next{animation:a .7s ease}
+@keyframes a{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true">
+<span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span><span class="star s4">✧</span>
+</div>
+<main>
+<section class="card">
+<div class="content">
+<div class="tiny">یک گوشه‌ی کوچیک، فقط برای تو✨️</div>
+<h1>سلام، ستاره کوچولو🥹</h1>
+<p class="lead">یه جای کوچیک برای چند تا حس قشنگ برات دارم</p>
+<button class="button" id="enter">بیا تو</button>
+<button class="button next hidden" id="go">بزن بریم</button>
+</div>
+</section>
+</main>
+<script>
+const enter=document.getElementById('enter'),go=document.getElementById('go');
+enter.onclick=()=>{
+  enter.classList.add('hidden');
+  go.classList.remove('hidden');
+};
+</script>
+</body>
+</html>

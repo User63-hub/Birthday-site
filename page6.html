@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>تولد مبارک 🎂✨</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --sky: #dff3ff;
+    --sky2: #f7fcff;
+    --ink: #24384b;
+    --soft: #526b7d;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+  }
+
+  body {
+    overflow: hidden;
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    background:
+      radial-gradient(circle at 50% 25%, rgba(255,255,255,.96) 0 14%, rgba(255,255,255,.45) 32%, transparent 60%),
+      linear-gradient(180deg, var(--sky) 0%, var(--sky2) 100%);
+    color: var(--ink);
+    transition: background 3.2s ease, color 2.2s ease;
+  }
+
+  .page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(42px, 8vh, 85px) 20px 35px;
+    text-align: center;
+    transition: opacity 3s ease;
+  }
+
+  .intro {
+    width: min(900px, 100%);
+    font-size: clamp(18px, 3.4vw, 31px);
+    line-height: 1.9;
+    font-weight: 600;
+    letter-spacing: -.4px;
+    animation: rise .9s ease both;
+  }
+
+  .cake-area {
+    position: relative;
+    width: min(500px, 90vw);
+    height: clamp(320px, 46vh, 430px);
+    margin-top: clamp(5px, 2vh, 18px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .cake {
+    position: relative;
+    width: min(390px, 78vw);
+    height: 235px;
+    filter: drop-shadow(0 18px 18px rgba(66,119,150,.15));
+    animation: cakeIn 1.1s .15s ease both;
+  }
+
+  .plate {
+    position: absolute;
+    width: 108%;
+    height: 34px;
+    left: -4%;
+    bottom: 2px;
+    border-radius: 50%;
+    background: linear-gradient(#fff, #e8f5fb);
+    box-shadow: 0 5px 0 rgba(115,166,191,.18), 0 15px 25px rgba(75,135,162,.12);
+  }
+
+  .tier {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 18px 18px 28px 28px;
+    overflow: visible;
+  }
+
+  .bottom-tier {
+    bottom: 28px;
+    width: 100%;
+    height: 112px;
+    background:
+      radial-gradient(circle at 15% 30%, rgba(255,255,255,.8) 0 3px, transparent 4px),
+      radial-gradient(circle at 82% 67%, rgba(255,255,255,.7) 0 4px, transparent 5px),
+      linear-gradient(180deg,#fffdfd 0%,#fff8fb 58%,#f3e3eb 100%);
+    box-shadow: inset 0 -12px 20px rgba(217,162,187,.13), inset 0 1px 0 #fff;
+  }
+
+  .cake-band {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 57%;
+    height: 15px;
+    background: linear-gradient(180deg, rgba(239,192,211,.75), rgba(255,222,233,.5));
+    box-shadow: 0 2px 5px rgba(170,112,139,.12);
+  }
+
+  .berry {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #fff 0 8%, #efb4cb 10% 55%, #d98eaf 100%);
+    box-shadow: 0 2px 4px rgba(166,95,127,.18);
+    z-index: 5;
+  }
+  .b1 { left: 13%; top: 69%; }
+  .b2 { left: 30%; top: 52%; }
+  .b3 { left: 67%; top: 72%; }
+  .b4 { left: 87%; top: 52%; }
+
+  .top-band {
+    top: 59%;
+    height: 12px;
+    opacity: .72;
+  }
+
+  .mini-flower {
+    position: absolute;
+    z-index: 5;
+    color: #e7a9c2;
+    font-size: 15px;
+    text-shadow: 0 1px 2px rgba(160,94,122,.18);
+  }
+  .f1 { left: 21%; top: 55%; }
+  .f2 { left: 49%; top: 71%; }
+  .f3 { left: 77%; top: 54%; }
+
+  .top-tier {
+    bottom: 115px;
+    width: 79%;
+    height: 88px;
+    background:
+      radial-gradient(circle at 25% 25%, rgba(255,255,255,.95) 0 3px, transparent 4px),
+      linear-gradient(180deg,#fff 0%,#fff8fb 58%,#f2e2eb 100%);
+    box-shadow: inset 0 -9px 17px rgba(217,162,187,.12), inset 0 1px 0 #fff;
+    z-index: 2;
+  }
+
+  .icing {
+    position: absolute;
+    top: -10px;
+    left: -1%;
+    width: 102%;
+    height: 38px;
+    border-radius: 50% 50% 45% 45%;
+    background: linear-gradient(180deg,#ffffff,#fff8fc);
+    box-shadow: 0 4px 9px rgba(160,121,142,.12);
+  }
+
+  .drip {
+    position: absolute;
+    top: 14px;
+    width: 18px;
+    border-radius: 0 0 14px 14px;
+    background: #fff;
+    box-shadow: inset -2px -2px 4px rgba(210,175,192,.1);
+  }
+
+  .d1 { left: 16%; height: 25px; }
+  .d2 { left: 32%; height: 17px; }
+  .d3 { left: 52%; height: 29px; }
+  .d4 { left: 72%; height: 20px; }
+  .d5 { left: 85%; height: 27px; }
+
+  .cream-dot {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #f2c8da;
+    box-shadow: 0 1px 3px rgba(175,112,143,.2);
+    z-index: 4;
+  }
+
+  .dot1 { left: 18%; top: 47%; }
+  .dot2 { left: 38%; top: 64%; }
+  .dot3 { left: 62%; top: 45%; }
+  .dot4 { left: 80%; top: 65%; }
+
+  .candle {
+    position: absolute;
+    z-index: 8;
+    left: 50%;
+    bottom: 190px;
+    width: 42px;
+    height: 112px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .candle-body {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 36px;
+    height: 95px;
+    transform: translateX(-50%);
+    border-radius: 10px 10px 7px 7px;
+    background:
+      repeating-linear-gradient(135deg, transparent 0 12px, rgba(255,255,255,.55) 12px 19px),
+      linear-gradient(90deg,#a9d8f0,#eaf9ff 48%,#a8d7ef);
+    box-shadow: inset -5px 0 7px rgba(71,132,162,.15), 0 4px 7px rgba(70,120,145,.14);
+  }
+
+  .wick {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 17px;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    background: #40382f;
+  }
+
+  .flame-wrap {
+    position: absolute;
+    z-index: 5;
+    top: -40px;
+    left: 50%;
+    width: 38px;
+    height: 58px;
+    transform: translateX(-50%);
+    transform-origin: 50% 100%;
+    transition: opacity 2.6s ease, transform 2.6s ease, filter 2.6s ease;
+  }
+
+  .flame {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 24px;
+    height: 42px;
+    transform: translateX(-50%);
+    border-radius: 55% 45% 55% 45%;
+    background: linear-gradient(180deg,#fff9c9 0%,#ffe26b 35%,#ffae3d 72%,#ff7134 100%);
+    box-shadow: 0 0 13px #ffd66a, 0 0 29px rgba(255,171,66,.65), 0 0 45px rgba(255,196,79,.35);
+    animation: flame 1.15s ease-in-out infinite alternate;
+  }
+
+  .flame::after {
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:6px;
+    width:9px;
+    height:20px;
+    transform:translateX(-50%);
+    border-radius:50%;
+    background:#fffde8;
+    opacity:.9;
+  }
+
+  .hint {
+    margin-top: clamp(2px, 1vh, 10px);
+    width: min(760px, 92vw);
+    font-size: clamp(15px, 2.6vw, 22px);
+    line-height: 2.05;
+    font-weight: 500;
+    animation: rise 1s .35s ease both;
+  }
+
+  .small {
+    margin-top: 2px;
+    font-size: clamp(11px, 1.8vw, 14px);
+    color: #718596;
+    font-weight: 400;
+    animation: rise 1s .5s ease both;
+  }
+
+  .final-screen {
+    position: fixed;
+    z-index: 50;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 3.1s ease, visibility 0s linear 3.1s;
+  }
+
+  .final-text {
+    position: relative;
+    isolation: isolate;
+    max-width: 850px;
+    padding: 30px 34px;
+    color: #273746;
+    font-size: clamp(19px, 4.3vw, 37px);
+    line-height: 2.05;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(8px) scale(.985);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+
+  /* نرم و ابری؛ مثل یک تکه ابر روشن وسط تاریکی */
+  .final-text::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 4px -16px;
+    border-radius: 46% 54% 52% 48% / 52% 45% 55% 48%;
+    background:
+      radial-gradient(circle at 15% 55%, rgba(255,255,255,.95) 0 16%, transparent 35%),
+      radial-gradient(circle at 34% 30%, rgba(255,255,255,.98) 0 18%, transparent 38%),
+      radial-gradient(circle at 57% 57%, rgba(255,255,255,.98) 0 20%, transparent 39%),
+      radial-gradient(circle at 79% 35%, rgba(255,255,255,.96) 0 18%, transparent 37%),
+      rgba(255,255,255,.88);
+    filter: blur(2px);
+    box-shadow: 0 0 42px rgba(255,255,255,.22);
+  }
+
+  body.darkening::before {
+    content:"";
+    position: fixed;
+    z-index: 40;
+    inset:0;
+    background:#000;
+    opacity:0;
+    pointer-events:none;
+    animation: darken 3.4s ease forwards;
+  }
+
+  body.done .final-screen {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 3.4s ease, visibility 0s;
+  }
+
+  body.done .final-text {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  body.done .page {
+    opacity: 0;
+  }
+
+  .smoke {
+    position: absolute;
+    z-index: 10;
+    top: -62px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .smoke i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: rgba(150,155,158,.35);
+    filter: blur(2px);
+  }
+
+  .smoke.active { opacity: 1; }
+  .smoke.active i:nth-child(1) { animation: smoke1 3.5s ease-out forwards; }
+  .smoke.active i:nth-child(2) { animation: smoke2 3.8s .15s ease-out forwards; }
+  .smoke.active i:nth-child(3) { animation: smoke3 4.1s .3s ease-out forwards; }
+
+  @keyframes flame {
+    0% { transform: translateX(-50%) rotate(-4deg) scale(.94,1); }
+    45% { transform: translateX(-50%) rotate(3deg) scale(1.04,.97); }
+    100% { transform: translateX(-50%) rotate(-2deg) scale(.96,1.06); }
+  }
+
+  @keyframes rise {
+    from { opacity:0; transform:translateY(18px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+
+  @keyframes cakeIn {
+    from { opacity:0; transform:translateY(25px) scale(.96); }
+    to { opacity:1; transform:translateY(0) scale(1); }
+  }
+
+  @keyframes darken {
+    0% { opacity:0; }
+    100% { opacity:1; }
+  }
+
+  @keyframes smoke1 {
+    0% { opacity:.1; transform:translate(-3px,0) scale(.55); }
+    20% { opacity:.55; }
+    100% { opacity:0; transform:translate(13px,-105px) scale(2.8); }
+  }
+  @keyframes smoke2 {
+    0% { opacity:.05; transform:translate(4px,0) scale(.5); }
+    25% { opacity:.45; }
+    100% { opacity:0; transform:translate(-17px,-135px) scale(3.2); }
+  }
+  @keyframes smoke3 {
+    0% { opacity:.05; transform:translate(0,0) scale(.45); }
+    25% { opacity:.35; }
+    100% { opacity:0; transform:translate(7px,-160px) scale(3.6); }
+  }
+
+  @media (max-height: 680px) {
+    .page { padding-top: 25px; }
+    .cake-area { height: 285px; }
+    .cake { transform:scale(.82); transform-origin:bottom center; }
+    .candle { bottom: 172px; }
+  }
+</style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="intro">
+      و اما میرسیم به مهمترین قسمت هر تولدی یعنی..کیک تولد!🥹🎂✨️
+    </div>
+
+    <div class="cake-area">
+      <div class="cake">
+        <div class="plate"></div>
+
+        <div class="tier bottom-tier">
+          <div class="icing">
+            <span class="drip d1"></span>
+            <span class="drip d2"></span>
+            <span class="drip d3"></span>
+            <span class="drip d4"></span>
+            <span class="drip d5"></span>
+          </div>
+          <div class="cake-band"></div>
+          <span class="cream-dot dot1"></span>
+          <span class="cream-dot dot2"></span>
+          <span class="cream-dot dot3"></span>
+          <span class="cream-dot dot4"></span>
+          <span class="berry b1"></span>
+          <span class="berry b2"></span>
+          <span class="berry b3"></span>
+          <span class="berry b4"></span>
+        </div>
+
+        <div class="tier top-tier">
+          <div class="icing">
+            <span class="drip d1"></span>
+            <span class="drip d3"></span>
+            <span class="drip d5"></span>
+          </div>
+          <div class="cake-band top-band"></div>
+          <span class="mini-flower f1">✦</span>
+          <span class="mini-flower f2">✦</span>
+          <span class="mini-flower f3">✦</span>
+        </div>
+
+        <div class="candle" id="candle" aria-label="برای خاموش کردن شمع کلیک کنید">
+          <div class="smoke" id="smoke">
+            <i></i><i></i><i></i>
+          </div>
+          <div class="flame-wrap" id="flameWrap">
+            <div class="flame"></div>
+          </div>
+          <div class="wick"></div>
+          <div class="candle-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hint">
+      وقتشه هرچند تا آرزوی قشنگ که میخوای کنی و شمع کیک تولدتو فوت کنی تا برآورده شههه🥲🕯✨️<br>
+      آماده ای؟
+    </div>
+
+    <div class="small">
+      هروقت آرزو کردی فوتش کن و روی شمع کلیک کن🤍
+    </div>
+  </main>
+
+  <section class="final-screen" aria-live="polite">
+    <div class="final-text">
+      تولدت مبارک کوچوشو ترین جوجوی ۲۱ ساله ی نازم؛<br>
+      امیدوارم دوستش داشته باشی و لبخند روی لبت اورده باشه(:💕✨️
+    </div>
+  </section>
+
+<script>
+  const candle = document.getElementById("candle");
+  const flameWrap = document.getElementById("flameWrap");
+  const smoke = document.getElementById("smoke");
+
+  let blown = false;
+
+  candle.addEventListener("click", () => {
+    if (blown) return;
+    blown = true;
+
+    // شعله به‌صورت نرم کوچک، کم‌نور و سپس خاموش می‌شود.
+    flameWrap.style.opacity = "0";
+    flameWrap.style.transform = "translateX(-50%) scale(.15)";
+    flameWrap.style.filter = "blur(5px)";
+
+    // کمی بعد از خاموش شدن، دود ظاهر می‌شود.
+    setTimeout(() => {
+      smoke.classList.add("active");
+    }, 1250);
+
+    // سپس کل صحنه به‌آرامی به سیاهی می‌رود.
+    setTimeout(() => {
+      document.body.classList.add("darkening");
+    }, 850);
+
+    // در پایان، متن نهایی ظاهر می‌شود.
+    // درست همزمان با کامل شدن تاریکی، پیام نمایش داده می‌شود.
+    setTimeout(() => {
+      document.body.classList.add("done");
+    }, 3100);
+  });
+</script>
+</body>
+</html>
